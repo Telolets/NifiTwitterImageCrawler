@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
-    <description></description>
+    <description>Collect images from twitter hash-based filter streaming</description>
     <groupId>31017bb5-016b-1000-eb3a-b4687f2354ef</groupId>
-    <name>Twitter Image Crawler</name>
+    <name>Twitter-image-crawler</name>
     <snippet>
         <connections>
             <id>2caa4e40-8891-3e95-0000-000000000000</id>
@@ -408,6 +408,31 @@
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
+                    <id>3ff5673d-3ebb-3f1e-0000-000000000000</id>
+                    <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>7395ea74-ecc3-3531-0000-000000000000</groupId>
+                        <id>7cf4a824-17e8-3272-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <source>
+                        <groupId>7395ea74-ecc3-3531-0000-000000000000</groupId>
+                        <id>3ce78cf9-6209-3d9f-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
                     <id>553ead92-4c98-3018-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -628,6 +653,31 @@
                     <source>
                         <groupId>7395ea74-ecc3-3531-0000-000000000000</groupId>
                         <id>3ce78cf9-6209-3d9f-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>d7a1c7cf-6973-3903-0000-000000000000</id>
+                    <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>7395ea74-ecc3-3531-0000-000000000000</groupId>
+                        <id>7cf4a824-17e8-3272-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <source>
+                        <groupId>7395ea74-ecc3-3531-0000-000000000000</groupId>
+                        <id>ff5eafbd-0f56-3b7a-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
@@ -864,8 +914,8 @@
                     <id>93d3889e-0cc7-350f-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>623.3287243535974</x>
-                        <y>-466.00176976475836</y>
+                        <x>696.4884533575037</x>
+                        <y>-429.4218747452271</y>
                     </position>
                     <comments></comments>
                     <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -877,8 +927,8 @@
                     <id>6b484afa-9c43-306b-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1649.0446170527782</x>
-                        <y>-714.9049405623527</y>
+                        <x>1632.2788699824657</x>
+                        <y>-428.3626737166496</y>
                     </position>
                     <comments></comments>
                     <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -890,8 +940,8 @@
                     <id>7cf4a824-17e8-3272-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1048.5973315942178</x>
-                        <y>-41.87163539292624</y>
+                        <x>1018.1141772973428</x>
+                        <y>-40.347474292538664</y>
                     </position>
                     <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                     <name>Failure Port</name>
@@ -902,8 +952,8 @@
                     <id>d2139159-0070-384e-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1259.8536751953634</x>
-                        <y>-704.9634298291326</y>
+                        <x>1247.6603158203634</x>
+                        <y>-429.09026088382006</y>
                     </position>
                     <comments></comments>
                     <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -915,8 +965,8 @@
                     <id>02260c63-e21b-3f5f-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1125.3707012823083</x>
-                        <y>533.8150568171966</y>
+                        <x>915.0365948369958</x>
+                        <y>448.4620294734466</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1240,8 +1290,8 @@
                     <id>3ce78cf9-6209-3d9f-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1766.3369154613702</x>
-                        <y>-47.11552096609023</y>
+                        <x>1600.2033705394952</x>
+                        <y>-31.873914790190724</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1287,7 +1337,7 @@
                     <executionNodeRestricted>false</executionNodeRestricted>
                     <name>HashContent</name>
                     <relationships>
-                        <autoTerminate>true</autoTerminate>
+                        <autoTerminate>false</autoTerminate>
                         <name>failure</name>
                     </relationships>
                     <relationships>
@@ -1302,8 +1352,8 @@
                     <id>559624ee-2236-3acb-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1514.2217535624723</x>
-                        <y>281.10539401750134</y>
+                        <x>1413.6271490702848</x>
+                        <y>221.66310275773571</y>
                     </position>
                     <bundle>
                         <artifact>nifi-update-attribute-nar</artifact>
@@ -1388,8 +1438,8 @@
                     <id>769f0e44-17b8-33cd-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>224.7249678238104</x>
-                        <y>86.15927285972839</y>
+                        <x>244.53908525545103</x>
+                        <y>-6.814546157681889</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1454,8 +1504,8 @@
                     <id>b24c9c69-87db-3a7c-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>290.76105084850406</x>
-                        <y>-265.5422763641772</y>
+                        <x>315.14761701061343</x>
+                        <y>-300.59797094425534</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1550,8 +1600,8 @@
                     <id>c1348b64-9908-3276-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>488.36592320685713</x>
-                        <y>408.2914569998418</y>
+                        <x>444.16523961310713</x>
+                        <y>240.6337726736699</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1742,8 +1792,8 @@
                     <id>ff5eafbd-0f56-3b7a-0000-000000000000</id>
                     <parentGroupId>7395ea74-ecc3-3531-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1613.6483905281702</x>
-                        <y>-380.5373891028786</y>
+                        <x>1426.1764667000452</x>
+                        <y>-261.65280658334734</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1823,7 +1873,7 @@
                         <name>duplicate</name>
                     </relationships>
                     <relationships>
-                        <autoTerminate>true</autoTerminate>
+                        <autoTerminate>false</autoTerminate>
                         <name>failure</name>
                     </relationships>
                     <relationships>
@@ -1835,7 +1885,7 @@
                     <type>org.apache.nifi.processors.standard.DetectDuplicate</type>
                 </processors>
             </contents>
-            <name>Process Image</name>
+            <name>Image Extraction PG</name>
             <variables/>
         </processGroups>
         <processGroups>
@@ -2957,7 +3007,7 @@
                     </entry>
                     <entry>
                         <key>Terms to Filter On</key>
-                        <value>cats,ねこ,狐</value>
+                        <value>高森藍子,藍子,大崎甘奈,甘奈,大崎甜花,甜花,シャニマス,桑山千雪</value>
                     </entry>
                     <entry>
                         <key>IDs to Follow</key>
@@ -3430,5 +3480,5 @@
             <type>org.apache.nifi.processors.standard.ControlRate</type>
         </processors>
     </snippet>
-    <timestamp>07/07/2019 11:24:11 JST</timestamp>
+    <timestamp>07/07/2019 14:11:14 JST</timestamp>
 </template>
